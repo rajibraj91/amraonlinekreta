@@ -1,0 +1,84 @@
+/* @@@@@@@@@@  footer  @@@@@@@@@@@ */
+.footer-top {
+    .footer-about {
+        .footer-logo {
+            img {}
+        }
+        p {
+            line-height: 24px;
+            font-size: 1rem;
+        }
+        .footer-support {
+            .fs-left {
+                @include breakpoint(lg) {
+                    @include breakpoint(max-xl) {
+                        display: none;
+                    }
+                }
+            }
+            .fs-right {
+                p {
+                    font-weight: 500;
+                    color: $title-color;
+                }
+            }
+        }
+        .footer-quite {
+            a {
+                color: $title-color;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    .ft-items {
+        @include breakpoint(sm) {
+            padding: 0 20px;
+        }
+        .ft-title {
+            @extend %pr;
+            &::after {
+                @extend %pa;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 1px;
+                background: $theme-color;
+            }
+            h5 {
+                padding-bottom: 20px;
+            }
+        }
+        .ft-body {
+            ul {
+                li {
+                    a {
+                        padding: 5px 0;
+                        margin: 2px 0;
+                    }
+                }
+            }
+        }
+    }
+    .col-12 {
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+.footer-bottom {
+    .copyright-area {
+        p {
+            font-size: 16px;
+
+                font-weight: 500;
+
+                
+            color: $title-color;
+            a {
+                color: $theme-color;
+            }
+        }
+    }
+}

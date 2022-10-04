@@ -1,0 +1,51 @@
+/*  @@@@@@@  Banner slider  @@@@@@  */
+.banner-grid {
+    display: grid;
+    grid-gap: 15px;
+    row-gap: 15px;
+    @include breakpoint(xl) {
+        grid-template-columns: 3fr 1fr;
+    }
+    .banner-item {
+        &:first-child {
+            grid-row: 1/3;
+            .banner-thumb {
+                height: 100%;
+                img {
+                    
+                    height: 100%;
+                }
+            }
+        }
+        &:nth-child(2), &:nth-child(3) {
+            @include breakpoint(max-xl) {
+                display: none;
+            }
+            .banner-thumb {
+                height: 260px;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+.page-header {
+    background: #e0e0e0;
+    ol {
+        li {
+            &.active {
+                color: $theme-color;
+            }
+            &::before {
+                color: $title-color !important;
+            }
+            a {
+                font-weight: 700;
+                color: $title-color;
+            }
+        }
+    }
+}

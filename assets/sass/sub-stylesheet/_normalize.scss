@@ -1,0 +1,66 @@
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: $bg-ash;
+	font-family: $roboto;
+	box-sizing: border-box;
+	outline: none;
+	color: $desc-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $title-color;
+	font-weight: 700;
+}
+
+h1>a, h2>a, h3>a, h4>a, h5>a, h6>a, a>h1, a>h2, a>h3, a>h4, a>h5, a>h6 {
+	color: $title-color;
+	@include transition($transition);
+}
+h1 {
+	font-size: $fs-h1;
+}
+h2 {
+	font-size: $fs-h2;
+}
+h3 {
+	font-size: $fs-h3;
+}
+h4 {
+	font-size: $fs-h4;
+}
+h5 {
+	font-size: $fs-h5;
+}
+h6 {
+	font-size: $fs-h6;
+}
+p {
+	font-size: $fs-base;
+	margin: 0 0 1em;
+	color: $desc-color;
+}
+input:focus,select:focus,button:focus {
+	outline: none;
+}
+a {
+	text-decoration: none;
+	color: $desc-color;
+	@include transition($transition);
+	&:hover {
+		color: $theme-color;
+	}
+}
+@media (min-width: 1450px) {
+	.container {
+		max-width: 1430px;
+	}
+}
+img {
+	@include transition($transition);
+}
